@@ -50,11 +50,11 @@ insert into BOOKS () values
 
 -- CREATING CUSTOMERS TABLE IN THE DATABASE BOOK STORE MANAGEMENT
 create table CUSTOMERS (
-CUSTOMER_ID	varchar(10) primary key,
+CUSTOMER_ID varchar(10) primary key,
 FIRST_NAME varchar(30) not null,
 LAST_NAME varchar(30) not null,
 GENDER varchar(20) not null,
-AGE	int,
+AGE int,
 EMAIL varchar(50) not null,	
 PHONE varchar(10)
 );
@@ -188,8 +188,8 @@ insert into STOCKS() values
 Select * From STOCKS;
 -- END
 
--- *********************************************************************************************************** --
--- !!!!! SOME OF QUERYS USING THE ABOVE TABLES !!!!! --
+-- ****************************************************************************************************************************** --
+                             -- !!!!! SOME OF QUERYS USING THE ABOVE TABLES !!!!! --
 
 -- (1) LIST BOOKS WITH STOCK LOWER THAN 5
 SELECT b.BOOK_ID,b.BOOK_NAME,s.NO_OF_BOOKS, s.stock_id
@@ -283,8 +283,8 @@ FROM books
 GROUP BY GENERE
 HAVING COUNT(*) > 1;
 
--- ************************************************************************************************************* --
--- !!!!! CREATING VIEWS !!!!! --
+-- *********************************************************************************************************************************** --
+                                             -- !!!!! CREATING VIEWS !!!!! --
 
 -- (1) CREATING VIEW TO LIST OUT THE  FEMALE CUSTOMERS
 create view Female_Cust as 
@@ -322,8 +322,8 @@ ON b.BOOK_ID = s.BOOK_ID
 WHERE NO_OF_BOOKS < 5;
 
 SELECT * FROM STOCK_LOWER_THAN_5;
--- ********************************************************************************************************* --
--- !!!!! STORED PROCEDURE !!!!! --
+-- ******************************************************************************************************************************** --
+                                           -- !!!!! STORED PROCEDURE !!!!! --
 
 -- (1) STORED PROCEDURE FOR MOST ORDERED CUSOMER
 
@@ -454,7 +454,7 @@ LEFT JOIN orders o ON c.customer_id = o.customer_id
 WHERE o.order_id IS NULL;
 End $$
 Delimiter  ;
--- ******************************************************************************************************** --
+-- ***************************************************************************************************************************** --
                                   -- !!!!! CALL BY PROCEDURES !!!!! --
 
 Call Cust_Most_Ordered();
