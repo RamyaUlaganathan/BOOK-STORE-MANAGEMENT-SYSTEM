@@ -1,4 +1,4 @@
-# 📚 Bookstore Management SQL Project
+# 📚 Bookstore Management system
 
 This project involves designing and implementing a database system for managing a bookstore. It includes schemas, data insertion, and queries for handling customers, books, orders, inventory, and more.
 
