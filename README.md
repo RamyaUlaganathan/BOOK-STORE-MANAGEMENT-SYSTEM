@@ -76,8 +76,3 @@ The database consists of the following tables:
 - Integration with Power BI for dashboards
 
 ---
-
-## 📬 Contact
-
-Feel free to reach out if you have suggestions or need help!
-
